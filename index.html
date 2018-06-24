@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>LitTalk</title>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   {% load static %}
+   <style>
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color:#efefef;
+   color:black;
+   text-align: ;
+}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">LitTalk</a>
+
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="hover"><a href="/LitTalkIndex/index/">Home</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Choose Category <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/LitTalkIndex/Hindipoem/">Hindi Kavita</a></li>
+          <li><a href="#">English Poem</a></li>
+          <li><a href="#">Article</a></li>
+        </ul>
+      </li>
+      <li><a href="/LitTalkIndex/AddPoem/">Add Poem</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+       <li> </li>
+      <li><a href="/LitTalkIndex/register/"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="/LitTalkIndex/login/"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+
+           <li><span> <p style="color:white">{% if user.is_authenticated %}Hello, {{ user.username  }}.{% endif %}</p></span> </li>
+    </ul>
+  </div>
+</nav>
+<div  style="margin-top:-2%" >
+<div  style="background-color:#E9967A" class="jumbotron">
+  <div class="container">
+
+<marquee>
+    <img  class="img-circle"  style="width:200;hight:500" src="{% static '/image/xp.jpg' %}" alt="Logo" />
+    <img  class="img-circle"  style="width:200;hight:500" src="{% static '/image/mahadevi.jpg' %}" alt="Logo" />
+     <img  class="img-circle"  style="width:200;hight:500" src="{% static '/image/xp1.jpg' %}" alt="Logo" />
+     <img  class="img-circle"  style="width:200;hight:500" src="{% static '/image/xp5.jpg' %}" alt="Logo" />
+      <img  class="img-circle"  style="width:200;hight:500" src="{% static '/image/xp6.jpg' %}" alt="Logo" />
+      <img  class="img-circle"  style="width:200;hight:500" src="{% static '/image/xp7.jpg' %}" alt="Logo" />
+      <img  class="img-circle"  style="width:200;hight:500" src="{% static '/image/xp8.jpg' %}" alt="Logo" />
+      <img  class="img-circle"  style="width:200;hight:500" src="{% static '/image/xp9.jpg' %}" alt="Logo" />
+      <img  class="img-circle"  style="width:200;hight:500" src="{% static '/image/xp10.jpg' %}" alt="Logo" />
+      <img  class="img-circle"  style="width:200;hight:500" src="{% static '/image/xp11.jpg' %}" alt="Logo" />
+    </marquee>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+</div>
+ <div  style="margin-top:-3%;" class="jumbotron">
+
+
+
+  </div>
+<div class="footer">
+  <p style="color:black;margin-left:2%">@Ajit</p>
+</div>
+</body>
+</html>

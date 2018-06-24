@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">LitTalk</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/LitTalkIndex/index/">Home</a></li>
+
+    </ul>
+ <ul class="nav navbar-nav navbar-right">
+      <li><a href="/LitTalkIndex/register/"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+ </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <div style="margin-top:-2%;height:600px" class="jumbotron">
+<div  class="container">
+<div class="form-group col-md-6">
+{% if messages %}
+<ul class="messages">
+   {% for message in messages %}
+	   <li class="alert alert-danger">{{ message }}</li>
+   {% endfor %}
+</ul>
+{% endif %}
+</div>
+
+</div>
+       <div  class="container">
+           <p style="color:red"> {{ msg }} </p>
+    </div>
+<div  class="container">
+ <div class="row">
+    <div class="col-sm-4" style="">
+         <form method="post" action="/LitTalkIndex/login/">
+               {% csrf_token %}
+    <div  class="form-group">
+      <label for="email">Username:</label>
+      <input style="width:300px" type="text" class="form-control" id="email" placeholder="Enter username" name="email" required maxlength="6">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input style="width:300px" type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required maxlength="10">
+    </div>
+    <div class="form-group form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember" > Remember me
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+    </div>
+    <div class="col-sm-8" style="">
+        <p>Literature, most generically,
+            is any body of written works. More restrictively,
+            literature writing is considered to be an art form, or
+            any single writing deemed to have artistic or intellectual value,
+            often due to deploying language in ways that differ from ordinary usage.
+            Its Latin root literatura/litteratura
+            (derived itself from littera: letter or handwriting) was
+            used to refer to all written accounts, though contemporary definitions extend
+            the term to include texts that are spoken or sung (oral literature).
+            The concept has changed meaning over time: nowadays it can
+            broaden to have non-written verbal art forms, and thus it is difficult
+            to agree on its origin, which can be paired with that of language or writing itself.
+            Developments in print technology have allowed an ever-growing distribution and
+            proliferation of written works, culminating in electronic literature.</p>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+  </div>
+
+</div>
+</body>
+</html>
